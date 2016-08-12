@@ -8,8 +8,30 @@ public class Firm {
 	private String firmName;
 	private String address;
 	private int firmBill;
-	ArrayList<Employee> list = new ArrayList<Employee>();
-	
+	private ArrayList<Employee> list = new ArrayList<>();
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getFirmName() {
+		return firmName;
+	}
+
+	public void setFirmName(String firmName) {
+		this.firmName = firmName;
+	}
+
+	public int getFirmBill() {
+		int i = firmBill;
+		return i;
+	}
+
+
 	public Firm() {
 		
 	}
@@ -18,6 +40,8 @@ public class Firm {
 		this.firmName = firmName;
 		this.address = address;
 	}
+
+
 	
 	public void earnMoney(int value) {
 		firmBill += value;
@@ -81,17 +105,17 @@ public class Firm {
 	
 	public static void main(String[] args) {
 		Firm firm = new Firm("Hasbro", "Owl Street 92");
-		
+
 		firm.add(new Employee("Luck", "Lowe", "male", 1000));
 		firm.add(new Employee("David", "Lowe", "male", 5000));
 		firm.add(new Employee("Luck", "Tix", "male", 2000));
-		
+
 		//System.out.println(firm.getSortedList());
 		System.out.println(firm.list);
 		//firm.list.remove(firm.list.get(0));
 		System.out.println(firm.getAllSortedBySalary());
 		//System.out.println(firm.getAll());
-		
+
 	}
 	
 }
