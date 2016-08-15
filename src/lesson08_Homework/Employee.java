@@ -1,6 +1,7 @@
 package lesson08_Homework;
 
-import java.util.List;
+
+import java.util.StringJoiner;
 
 /**
  * Created by punchCleric on 10.08.2016.
@@ -22,10 +23,52 @@ public class Employee {
         this.salary = salary;
     }
 
+
+    private String getName() {
+        return name;
+    }
+
+    private String getLastname() {
+        return lastname;
+    }
+
+    private String getGender() {
+        return gender;
+    }
+
+    private String getPatronymic() {
+        return patronymic;
+    }
+
+    public int getSalary() {
+        int i = salary;
+        return i;
+    }
+
+    public int getBill() {
+        int i = bill;
+        return i;
+    }
+
+    public void setDepartment(Department department){
+        this.department = department;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
     public void giveSalary() {
         bill += salary;
     }
 
+    public String toString() {
+        return "Name: " + getName() + "\nLastname: " + getLastname() + "\nPatronymic: " + getPatronymic() + "\nPost: " + this.getClass();
+    }
 
 
+    protected String getInfo() {
+        String info = getName() + getLastname() + getPatronymic();
+        return info.toLowerCase();
+    }
 }

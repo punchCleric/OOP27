@@ -19,6 +19,8 @@ public class Manager extends Employee {
         super(name, lastname, patronymic, gender, salary);
     }
 
+
+
     @Override
     public void giveSalary() {
         bill += salary + (department.getDepartmentWorkerList().size() * 50);
